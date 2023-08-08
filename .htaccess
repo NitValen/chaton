@@ -4,3 +4,14 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ index.php?page=$1 [L]
+
+<IfModule mod_env.c> 
+   #Assuming this is the production environment 
+   SetEnv ENVIRONMENT "production" 
+</IfModule> 
+
+<IfModule mod_rewrite.c> 
+    # More intelligent robots.txt 
+    RewriteCond %{REQUEST_FILENAME} !-f 
+    RewriteRule ^robots\.txt$ robots.phtml [NC,L] 
+</IfModule> 

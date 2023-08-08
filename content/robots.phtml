@@ -1,0 +1,28 @@
+<?php 
+ 
+$environment = trim(strtolower(getenv('ENVIRONMENT'))); 
+ 
+if (empty($environment)) { 
+    $environment = 'staging'; 
+} 
+?> 
+ 
+ 
+# Directories 
+Disallow: /404/ 
+Disallow: /app/ 
+Disallow: /var/ 
+ 
+# Paths (clean URLs) 
+Disallow: /index.php/ 
+ 
+# Sitemap 
+Sitemap: http://www.yoursite.com/sitemap.xml 
+ 
+User-agent: * 
+Allow: / 
+ 
+<?php if ($environment !== 'production'): ?> 
+    # Disallow ALL when in staging 
+    Disallow: / 
+<?php endif;?> 
