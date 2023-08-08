@@ -8,7 +8,7 @@
 function config($key = '')
 {
     $config = [
-        'name' => 'Chaton',
+        'name' => '',
         'site_url' => '',
         'pretty_uri' => false,
         'nav_menu' => [

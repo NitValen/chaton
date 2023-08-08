@@ -11,6 +11,7 @@
 <div class="wrap">
 
     <header>
+        <img src="/template/static/logo.png" style="max-width: 10%;">
         <h1><?php site_name(); ?></h1>
         <nav class="menu">
             <?php nav_menu(); ?>
@@ -18,12 +19,11 @@
     </header>
 
     <article>
-        <h2><?php page_title(); ?></h2>
         <?php page_content(); ?>
     </article>
 
     <footer>
-        <small>&copy;<?php echo date('Y'); ?> <?php site_name(); ?>.<br><?php site_version(); ?></small>
+        <small>&copy;<?php echo date('Y'); ?></small>
     </footer>
 
 </div>
