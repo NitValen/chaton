@@ -11,7 +11,7 @@
 <div class="wrap">
 
     <header>
-        <img src="/template/static/logo.png" style="max-width: 10%;">
+        <img src="/static/logo.png" style="max-width: 10%;">
         <h1><?php site_name(); ?></h1>
         <nav class="menu">
             <?php nav_menu(); ?>
